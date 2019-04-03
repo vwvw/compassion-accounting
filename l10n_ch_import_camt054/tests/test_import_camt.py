@@ -55,6 +55,7 @@ class TestImportCamt(SingleTransactionCase):
 
         statement_line_camt053 = account_bank_statement_line_obj.search([
             ('name', '=', 'Demo Camt053')])
+        assert len(statement_line_camt053) == 1
 
         # Reconcile line from the camt 053
         new_aml_dicts = []
